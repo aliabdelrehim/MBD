@@ -18,6 +18,11 @@ ROI_Data = RawData(1:2, 2:end);
 ROI_Data = ROI_Data .^2;
 Calibrated_Data = ROI_Data./10;
 
+%% Project Requirement 4: Generate Data Padding Sequence
+
+pad_val = [5 5];
+PadMatrix = repmat(pad_val, 2, 1);
+
 
 
 
