@@ -23,6 +23,14 @@ Calibrated_Data = ROI_Data./10;
 pad_val = [5 5];
 PadMatrix = repmat(pad_val, 2, 1);
 
+%% Project Requirement 5: Assemble Final Transmission Data Packet
+
+% Combine the processed data with the padding sequence
+TransmissionData = [Calibrated_Data PadMatrix ];
+
+
+
+
 
 
 
