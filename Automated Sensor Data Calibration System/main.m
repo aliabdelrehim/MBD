@@ -28,6 +28,15 @@ PadMatrix = repmat(pad_val, 2, 1);
 % Combine the processed data with the padding sequence
 TransmissionData = [Calibrated_Data PadMatrix ];
 
+%% Project Requirement 6: Evaluate Sensor's Physical System Model
+
+A = [1 2; 2 2];
+b = [2; 6];
+
+inv_A = inv(A);
+x = inv_A * b;
+
+tra_A = trace(A);
 
 
 
