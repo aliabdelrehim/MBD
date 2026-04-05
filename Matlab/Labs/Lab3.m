@@ -11,4 +11,9 @@ n = input('Enter matrix size: ');
 A = zeros(n);
 
 A(1,:) = randi(20, 1, n);
-disp(A)
+disp(A);
+
+%% Task 3: Matrix Indexing
+
+Data = [1 2 3 4; 5 6 7 8; 9 10 11 12];
+Extracted_Data = Data([1,3], 2:end);
