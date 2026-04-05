@@ -8,12 +8,21 @@ fprintf('The converted integer is: %d\n', int_val);
 %% Task 2: Matrix Creation & Input/Output Commands
 
 n = input('Enter matrix size: ');
-A = zeros(n);
+Z = zeros(n);
 
-A(1,:) = randi(20, 1, n);
-disp(A);
+Z(1,:) = randi(20, 1, n);
+disp(Z);
 
 %% Task 3: Matrix Indexing
 
 Data = [1 2 3 4; 5 6 7 8; 9 10 11 12];
 Extracted_Data = Data([1,3], 2:end);
+
+%% Task 4: Mathematical Operations (Array Operations)
+
+A = [2 4; 6 8];
+B = [2 2; 2 2];
+
+C = A.^2;
+Math_Result = C./B;
+
