@@ -26,3 +26,26 @@ B = [2 2; 2 2];
 C = A.^2;
 Math_Result = C./B;
 
+%% Task 5: Repeating & Concatenation
+
+v = [7 8];
+
+Repeated_Mat = repmat(v,2,1);
+col = [9; 9];
+
+Combined_Mat = [Repeated_Mat col];
+
+%% Task 6: Matrix Operations (Linear Algebra) & Input/Output
+
+D = [1 2; 2 2];
+E = [2; 6];
+
+x = inv(D)*E;
+tra_D = trace(D);
+
+fprintf('The Trace of the Matrix is: %d\n', tra_D);
+
+
+
+
+
