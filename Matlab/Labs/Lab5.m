@@ -1,0 +1,51 @@
+%% Task 1: Input/Output Commands, Basic Data Types & Matrix Creation
+
+Dept_name = input('Enter your department name: ', 's');
+Dept_num = input('Enter a matrix dimension N: ');
+
+Dept_empty = isempty(Dept_name);
+
+fprintf('Department %s created %dx%d Matrix, Is it Empty? %d\n', Dept_name, Dept_num, Dept_num, Dept_empty);
+
+%% Task 2: Matrix Creation, Matrix Indexing & Mathematical Operations (Array Operations)
+
+A = 1:16;
+M = reshape(A, [4,4]);
+SubM = M(end-1:end, end-1:end);
+ID = eye(2);
+Math_Mat = (SubM.^2) + ID;
+
+%% Task 3: Matrix Creation, Repeating & Concatenation
+
+v = 10:-3:1;
+Rep_A = repmat(v, 3, 2);
+col = zeros(3, 1);
+Final_Block = [Rep_A col];
+
+%% Task 4: Programming with MATLAB (Functions, If-Condition) & Matrix Operations
+
+A = [1 3 0; 2 1 3; 4 2 3];
+b = [1; 6; 3];
+
+x = solveLinear(A, b);
+
+fprintf('The Returned Vector is:\n');
+fprintf('%d\n', x);
+
+%% Task 5: Programming with MATLAB (While Loop, For Loop, Anonymous Functions) & I/O
+
+user_input = 0;
+
+while user_input <= 0
+    user_input = input('Enter a strictly positive integer: ');
+end
+
+f = @(x) x.^2 + 10;
+    
+total_sum = 0;
+for i = 1:user_input
+    total_sum = total_sum + f(i);
+end
+
+fprintf('The final accumulated sum is %d\n', total_sum);
+
