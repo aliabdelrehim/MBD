@@ -1,3 +1,5 @@
+%% Solve Lienar Equation in Lab5
+
 function x = solveLinear(A, b)
     determinantA = det(A);
     
