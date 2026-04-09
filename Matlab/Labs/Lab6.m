@@ -7,8 +7,8 @@ while user_input <= 2
 end
 
 N = user_input;
-M = rand(N);
-sub_M = M(end-1:end, end-1:end);
+N_random = rand(N);
+sub_M = N_random(end-1:end, end-1:end);
 
 %% Task 2: Programming with MATLAB, Matrix Operations & If-Condition
 
@@ -48,3 +48,8 @@ switch UserCalculation
         disp('Invalid Operation!')
 end
 
+%% Task 7: Logical Indexing, Basic Data Types & Math Operations
+
+M = [12 -5 8; -3 9 -1];
+NegMask = M < 0;
+M(NegMask) = abs(M(NegMask))*10;
