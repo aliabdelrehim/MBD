@@ -48,5 +48,11 @@ end
 tra_I = trace(I_mat);
 fprintf('The trace of current matrix is %d\n', tra_I);
 
+%% Project Requirement 7: Determine Operating Mode (Programming with MATLAB)
+
+result = setBMSMode('Drive');
+output = result + "Mode";
+disp(output)
+
 
 
