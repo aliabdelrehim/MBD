@@ -26,3 +26,27 @@ Norm_Power = (Critical_Cells.^2)/MaxCellVoltage;
 
 status_flag = [0 1];
 Flag_Matrix = repmat(status_flag, 2, 1);
+
+%% Project Requirement 5: Assemble CAN Bus Transmission Packet
+
+CAN_Packet = [Norm_Power Flag_Matrix];
+
+%% Project Requirement 6: Evaluate Internal Resistance via Linear Algebra
+
+% square current coefficient matrix
+I_mat = [5 2; 2 4];
+
+% measured voltage column vector
+V_vec = [14; 12];
+
+det_Current = det(I_mat);
+
+if det_Current ~= 0
+    R_vec = inv(I_mat)*V_vec;
+end
+
+tra_I = trace(I_mat);
+fprintf('The trace of current matrix is %d\n', tra_I);
+
+
+
