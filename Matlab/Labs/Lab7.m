@@ -12,3 +12,11 @@ disp(MyCell{1})
 
 %% Task 3: Basic Data Types (Structures), Programming (If-Condition) & I/O Commands
 
+student.Name = 'Ali';
+student.Age = 21;
+student.Gpa = 3.6;
+
+if student.Gpa >= 3.5
+    fprintf('Excellent Student: %s\n', student.Name);
+end
+
