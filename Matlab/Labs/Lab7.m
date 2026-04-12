@@ -53,7 +53,7 @@ end
 
 disp(color_input);
 
-%% Task 7: Plotting in MATLAB & I/O Commands
+% Task 7: Plotting in MATLAB & I/O Commands
 
 x = 0:2*pi;
 y = sin(x);
@@ -62,7 +62,7 @@ plot(x, y, 'r--', 'LineWidth', 3)
 title('Sine Wave')
 xlabel('sin(x)')
 
-%% Task 8: Plotting in MATLAB (Subplot)
+% Task 8: Plotting in MATLAB (Subplot)
 
 v = [20 35 45];
 
@@ -74,7 +74,18 @@ subplot(1, 2, 2)
 pie(v)
 title('Pie Chart')
 
+% Task 9: Plotting in MATLAB (Hold On & Legend)
+
+x = 1:5;
+x_squared = x.^2;
+x_cubed = x.^3;
+
+plot(x_squared, 'b')
+hold on
+plot(x_cubed, 'g')
+legend('x Squared', 'x Cubed')
 
 
+%% Task 10: Programming (Functions), Plotting & I/O Commands (sprintf)
 
-
+analyzeData([8, 4, 6, 9, 2 10]);
