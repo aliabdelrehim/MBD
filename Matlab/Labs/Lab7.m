@@ -20,3 +20,61 @@ if student.Gpa >= 3.5
     fprintf('Excellent Student: %s\n', student.Name);
 end
 
+%% Task 4: Programming (For Loop) & I/O Commands
+
+for i = 1:5
+    result = i * 10;
+    fprintf('%d ', result);
+end
+fprintf('\n');
+
+%% Task 5: Programming (While Loop) & I/O Commands
+
+number_input = input('Enter a positive number: ');
+
+while number_input <= 0
+    number_input = input('Invalied! Enter a positive number: ');
+end
+
+%% Task 6: Programming (Switch Case), Data Types & I/O Commands
+
+color_input = input('Enter a color code (r, g, b): ','s');
+
+switch color_input
+    case 'r'
+        color_input = 'RED';
+    case 'g'
+        color_input = 'GREEN';
+    case 'b'
+        color_input = 'BLUE';
+    otherwise
+        color_input = 'UNKNOWN';
+end
+
+disp(color_input);
+
+%% Task 7: Plotting in MATLAB & I/O Commands
+
+x = 0:2*pi;
+y = sin(x);
+
+plot(x, y, 'r--', 'LineWidth', 3)
+title('Sine Wave')
+xlabel('sin(x)')
+
+%% Task 8: Plotting in MATLAB (Subplot)
+
+v = [20 35 45];
+
+subplot(1, 2, 1)
+bar(v)
+title('Bar Chart')
+
+subplot(1, 2, 2)
+pie(v)
+title('Pie Chart')
+
+
+
+
+
