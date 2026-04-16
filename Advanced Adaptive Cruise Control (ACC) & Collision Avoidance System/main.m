@@ -1,0 +1,12 @@
+%% Project Title: Advanced Adaptive Cruise Control (ACC) & Collision Avoidance System
+
+%% Project Requirement 1: Initialize ACC System and Validate Speed (I/O, Basic Data Types, While Loop)
+
+user_input = input('Enter cruising speed (km/h) > 50: ');
+
+while user_input < 50
+    user_input = input('Invalid! Speed must be > 50. Try again: ');
+end
+
+user_input_uint16 = uint16(user_input);
+fprintf('Cruising Speed set to %d km/h\n', user_input_uint16);
