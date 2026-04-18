@@ -16,4 +16,26 @@ gear_status = uint8(5);
 LiDAR_Buffer = zeros(10, 10, 3, 'uint8');
 whos
 
+%% Project Requirement 3: Execution Time Profiling (Dynamic vs. Preallocated Memory)
+
+tic
+for i = 1:10000
+    dyn_array(i) = i;
+end
+
+elapsedTimeDyna = toc;
+fprintf('Elapsed time: %.6f seconds\n', elapsedTimeDyna);
+
+tic
+stat_array = zeros(1, 10000);
+for i = 1:10000
+    stat_array(i) = i;
+end
+
+elapsedTimeSta = toc;
+fprintf('Elapsed time: %.6f seconds\n', elapsedTimeSta);
+
+
+
+
 
