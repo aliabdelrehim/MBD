@@ -35,6 +35,24 @@ end
 elapsedTimeSta = toc;
 fprintf('Elapsed time: %.6f seconds\n', elapsedTimeSta);
 
+%% Project Requirement 4: Targeted Workspace Cleanup for Embedded Code Generation
+
+% Before the Model-Based Design toolchain generates the final ECU C-code, 
+% the workspace must be strictly cleaned of any temporary, 
+% heavy simulation variables to prevent memory overflow
+
+Temp_Filter = randn(1000, 1000);
+clear Temp_Filter
+clc
+
+%% Project Requirement 5: Memory-Aligned Redundancy Padding for CAN Bus Payload
+
+
+pad_seq = uint8([255; 255]);
+Padding_Block = repmat(pad_seq, 1, 2);
+CAN_Payload = [zeros(2) Padding_Block];
+
+
 
 
 
