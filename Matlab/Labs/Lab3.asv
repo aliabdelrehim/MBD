@@ -1,0 +1,5 @@
+%% Task 1: Basic Data Types & Input/Output Commands
+
+user_val = input('Enter a decimal number: ');
+int_val = int32(user_val);
+fprintf(u)

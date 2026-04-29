@@ -1,12 +1,13 @@
-function x = solveSystem(a, b)
+function x = solveSystem(A, b)
 
-    determinantA = det(a);
+    determinantA = det(A);
 
     if determinantA == 0
+        fprintf('')
         disp('No Uniquie Solution []');
         x = [];
-    else
-        x = inv(a) * b;
     end
 end
+
+
 

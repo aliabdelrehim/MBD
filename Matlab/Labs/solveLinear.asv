@@ -1,0 +1,24 @@
+% function x = solveLinear(A, b)
+%     determinantA = det(A);
+% 
+%     if determinantA ~= 0
+%         x = inv(A) * b;
+%     else
+%         x = [];
+%     end
+% end
+
+N = 3;
+sum = 0;
+count = 1;
+
+while count <= N
+    fprintf('Count is: %d\n', count)
+    sum = sum + count;
+    fprintf('Sum is: %d\n', sum)
+    fprintf('Count is: %d\n', count)
+    count = count + 1;
+    fprintf('Count after +1 is: %d\n', sum)
+end
+
+fprintf('The sum of numbers from 1 to %d is %d\n', N, sum);

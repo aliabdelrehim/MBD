@@ -49,8 +49,7 @@ switch user_color
         color_name = "Green";
     case 'b'
         color_name = "Blue";
-    otherwise
-        color_name = "Unknown Color";
+    
 end
 
 fprintf('The selected Color is: %s\n', color_name);

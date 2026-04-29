@@ -1,0 +1,23 @@
+%% Task 1: Basic Data Types, Input/Output Commands, & If-Condition
+
+prompt = input('Enter an integer number: ');
+prompt_int32 = int32(prompt);
+status = '';
+
+if prompt_int32 > 50
+    status = 'High';
+elseif prompt_int32 == 50
+    status = 'Perfect';
+else
+    status = 'Low';
+end
+
+disp(status)
+
+%% Task 2: Matrix Creation, Matrix Indexing, & Concatenation
+
+M = [10 20 30; 40 50 60; 70 80 90];
+Sub_M = M(:, [1,end]);
+
+V = ones(1, 3);
+Final_Mat
